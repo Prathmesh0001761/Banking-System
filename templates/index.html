@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h3 class="text-center">🔑 Enter Your PIN</h3>
+<form method="post">
+    <input type="text" name="pin_no" required placeholder="Enter PIN">
+    <button type="submit" class="btn-custom">🔓 Login / Create Account</button>
+</form>
+{% if message %}
+    <p class="alert mt-3">{{ message }}</p>
+{% endif %}
+{% endblock %}

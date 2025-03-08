@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h3 class="text-center">💸 Withdraw Money</h3>
+<form method="post">
+    <input type="text" name="pin_no" required placeholder="Enter PIN">
+    <input type="number" step="0.01" name="with_amt" required placeholder="Enter amount">
+    <button type="submit" class="btn-custom">🏦 Withdraw</button>
+</form>
+{% if success %}
+    <p class="alert mt-3">✅ {{ success }} New Balance: ₹{{ balance }}</p>
+{% elif error %}
+    <p class="alert mt-3">❌ {{ error }}</p>
+{% endif %}
+{% endblock %}

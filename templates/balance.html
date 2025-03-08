@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h3 class="text-center">📊 Account Balance</h3>
+{% if balance is not none %}
+    <p class="alert mt-3">💰 Your current balance: ₹{{ balance }}</p>
+{% else %}
+    <p class="alert mt-3">❌ {{ error }}</p>
+{% endif %}
+{% endblock %}
